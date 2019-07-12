@@ -14,7 +14,7 @@ tags: []
 1. 設定を変える(`config.toml`)
     * `languageCode = "ja-JP"`
     * `title`
-    * `publishDir = "doc"`
+    * `publishDir = "docs"`
     * 各種アカウント情報
     * `[params]` の `description`
 1. 自動生成されたファイル・ディレクトリを削除・リネーム
