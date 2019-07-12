@@ -1,0 +1,42 @@
+---
+title: blogdown でウェブサイトを作る
+author: ''
+date: '2019-07-12T00:00:00+09:00'
+slug: blogdown でウェブサイトを作る
+categories: []
+tags: []
+---
+
+
+
+<ol style="list-style-type: decimal">
+<li><code>blogdown</code> パッケージをインストール</li>
+<li>Rstudio からプロジェクトを新規作成
+<ul>
+<li>New directory &gt; Website using blogdown</li>
+</ul></li>
+<li>設定を変える(<code>config.toml</code>)
+<ul>
+<li><code>languageCode = "ja-JP"</code></li>
+<li><code>title</code></li>
+<li><code>publishDir = "doc"</code></li>
+<li>各種アカウント情報</li>
+<li><code>[params]</code> の <code>description</code></li>
+</ul></li>
+<li>自動生成されたファイル・ディレクトリを削除・リネーム
+<ul>
+<li><code>public</code> は <code>doc</code> に変更</li>
+<li>ファビコン（<code>favicon.ico</code>）は <code>static</code> に置く</li>
+<li>ロゴ（<code>logo.png</code>）は <code>static/images</code> に置く</li>
+<li><code>contents</code> 以下も <code>about.md</code> 以外消す</li>
+</ul></li>
+<li>コンテンツを書く
+<ul>
+<li><code>content/about.md</code> を適当に書き換える</li>
+<li><code>content/post</code> 以下に書きたいことを書く</li>
+</ul></li>
+<li>GitHub に push
+<ul>
+<li>設定で doc を GitHub pages として使うようにする</li>
+</ul></li>
+</ol>

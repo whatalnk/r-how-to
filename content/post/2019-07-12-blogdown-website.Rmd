@@ -1,0 +1,29 @@
+---
+title: blogdown でウェブサイトを作る
+author: ''
+date: '2019-07-12T00:00:00+09:00'
+slug: blogdown でウェブサイトを作る
+categories: []
+tags: []
+---
+
+1. `blogdown` パッケージをインストール
+1. Rstudio からプロジェクトを新規作成
+    * New directory > Website using blogdown
+
+1. 設定を変える(`config.toml`)
+    * `languageCode = "ja-JP"`
+    * `title`
+    * `publishDir = "doc"`
+    * 各種アカウント情報
+    * `[params]` の `description`
+1. 自動生成されたファイル・ディレクトリを削除・リネーム
+    * `public` は `doc` に変更
+    * ファビコン（`favicon.ico`）は `static` に置く
+    * ロゴ（`logo.png`）は `static/images` に置く
+    * `contents` 以下も `about.md` 以外消す
+1. コンテンツを書く
+    * `content/about.md` を適当に書き換える
+    * `content/post` 以下に書きたいことを書く
+1. GitHub に push
+    * 設定で doc を GitHub pages として使うようにする
