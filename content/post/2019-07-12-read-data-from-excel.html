@@ -1,0 +1,69 @@
+---
+title: Excelからデータを読み込む
+author: ''
+date: '2019-07-12T22:00:00+09:00'
+slug: excelからデータを読み込む
+categories: []
+tags: []
+---
+
+
+
+<p><code>wakefield</code> パッケージで作った適当なデータを読み込んでみる．</p>
+<ul>
+<li><a href="/post/data/car-random.xlsx">Excel ファイル</a></li>
+<li><a href="/post/data/car-random.csv">CSV版</a></li>
+</ul>
+<div id="readxl-" class="section level2">
+<h2>readxl パッケージを使う</h2>
+<pre class="r"><code>library(readxl)</code></pre>
+<pre><code>## Warning: package &#39;readxl&#39; was built under R version 3.5.2</code></pre>
+<pre class="r"><code>d &lt;- read_excel(path = &quot;data/car-random.xlsx&quot;, sheet = 1)
+d</code></pre>
+<pre><code>## # A tibble: 10 x 3
+##    番号  車                 速度 
+##    &lt;chr&gt; &lt;chr&gt;              &lt;chr&gt;
+##  1 01    Fiat X1-9          99   
+##  2 02    Merc 450SLC        100.5
+##  3 03    Dodge Challenger   118.4
+##  4 04    Porsche 914-2      95.1 
+##  5 05    Chrysler Imperial  102.7
+##  6 06    Lotus Europa       50.9 
+##  7 07    Fiat X1-9          106.8
+##  8 08    Valiant            116.7
+##  9 09    Cadillac Fleetwood 110.3
+## 10 10    Honda Civic        95.3</code></pre>
+</div>
+<div id="section" class="section level2">
+<h2>クリップボードを使う</h2>
+<ul>
+<li>読みこみたいExcelファイルを開いて，データをクリップボードにコピー</li>
+<li><code>header=TRUE</code>: 最初の行をカラム名として使う</li>
+<li><code>sep="\t"</code>: データの区切り（行ごとの列の区切り）.Excel は タブ文字（<code>\t</code>）</li>
+</ul>
+<pre class="r"><code>d &lt;- read.table(&quot;clipboard&quot;, header=TRUE, sep=&quot;\t&quot;)</code></pre>
+</div>
+<div id="csv" class="section level2">
+<h2>CSVに変換してから読み込む</h2>
+<ul>
+<li>Excel を開いて，CSVファイルとして保存する（ファイル &gt; 名前を付けて保存）</li>
+<li><code>fileEncoding</code>は，
+<ul>
+<li>CSV UTF-8 で保存した場合: <code>UTF-8-BOM</code></li>
+<li>CSV で保存した場合は: <code>SJIS</code></li>
+</ul></li>
+</ul>
+<pre class="r"><code>d &lt;- read.csv(file = &quot;data/car-random.csv&quot;, header=TRUE, fileEncoding = &quot;UTF-8-BOM&quot;)
+d</code></pre>
+<pre><code>##    番号                 車  速度
+## 1     1          Fiat X1-9  99.0
+## 2     2        Merc 450SLC 100.5
+## 3     3   Dodge Challenger 118.4
+## 4     4      Porsche 914-2  95.1
+## 5     5  Chrysler Imperial 102.7
+## 6     6       Lotus Europa  50.9
+## 7     7          Fiat X1-9 106.8
+## 8     8            Valiant 116.7
+## 9     9 Cadillac Fleetwood 110.3
+## 10   10        Honda Civic  95.3</code></pre>
+</div>

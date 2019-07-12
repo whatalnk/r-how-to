@@ -1,0 +1,43 @@
+---
+title: Excelからデータを読み込む
+author: ''
+date: '2019-07-12T22:00:00+09:00'
+slug: excelからデータを読み込む
+categories: []
+tags: []
+---
+
+`wakefield` パッケージで作った適当なデータを読み込んでみる．
+
+* [Excel ファイル](/post/data/car-random.xlsx)
+* [CSV版](/post/data/car-random.csv)
+
+## readxl パッケージを使う
+
+```{r}
+library(readxl)
+d <- read_excel(path = "data/car-random.xlsx", sheet = 1)
+d
+```
+
+## クリップボードを使う
+
+* 読みこみたいExcelファイルを開いて，データをクリップボードにコピー
+* `header=TRUE`: 最初の行をカラム名として使う
+* `sep="\t"`: データの区切り（行ごとの列の区切り）.Excel は タブ文字（`\t`）
+
+```{r eval=FALSE}
+d <- read.table("clipboard", header=TRUE, sep="\t")
+```
+
+## CSVに変換してから読み込む
+
+* Excel を開いて，CSVファイルとして保存する（ファイル > 名前を付けて保存）
+* `fileEncoding`は，
+  * CSV UTF-8 で保存した場合: `UTF-8-BOM`
+  * CSV で保存した場合は: `SJIS`
+
+```{r}
+d <- read.csv(file = "data/car-random.csv", header=TRUE, fileEncoding = "UTF-8-BOM")
+d
+```
