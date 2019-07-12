@@ -10,8 +10,8 @@ tags: []
 1. `blogdown` パッケージをインストール
 1. Rstudio からプロジェクトを新規作成
     * New directory > Website using blogdown
-
 1. 設定を変える(`config.toml`)
+    * `baseurl = "https://uesrname.github.io/repo-name/"`
     * `languageCode = "ja-JP"`
     * `title`
     * `publishDir = "docs"`
@@ -25,5 +25,7 @@ tags: []
 1. コンテンツを書く
     * `content/about.md` を適当に書き換える
     * `content/post` 以下に書きたいことを書く
+    * Addins > Serve Site でローカルサーバーを立ち上げつつやる
+1. `.nojekyll` ファイルを作ってルートディレクトリに置く
 1. GitHub に push
-    * 設定で doc を GitHub pages として使うようにする
+    * 設定で docs を GitHub pages として使うようにする
