@@ -1,0 +1,21 @@
+---
+title: wakefieldパッケージでデータを生成する
+author: ''
+date: '2019-07-12T21:00:00+09:00'
+slug: wakefieldパッケージでデータを生成する
+categories: []
+tags: []
+---
+
+
+
+<p><a href="https://github.com/trinker/wakefield">trinker/wakefield</a></p>
+<p>カテゴリごとにそれっぽいデータを生成してくれるパッケージ</p>
+<pre class="r"><code>d &lt;- data.frame(
+  &quot;番号&quot; = wakefield::id(10),
+  &quot;車&quot; = wakefield::car(10), 
+  &quot;速度&quot; = wakefield::speed_kph(10)
+) </code></pre>
+<p>保存</p>
+<pre class="r"><code>library(openxlsx)
+write.xlsx(d, file=&quot;car-random.xlsx&quot;)</code></pre>
