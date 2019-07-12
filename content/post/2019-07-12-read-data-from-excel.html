@@ -9,16 +9,15 @@ tags: []
 
 
 
-<p><code>wakefield</code> パッケージで作った適当なデータを読み込んでみる．</p>
+<p><code>wakefield</code> パッケージで <a href="/r-how-to/2019/07/12/wakefieldパッケージでデータを生成する/">作った</a> 適当なデータを読み込んでみる．</p>
 <ul>
-<li><a href="/post/data/car-random.xlsx">Excel ファイル</a></li>
-<li><a href="/post/data/car-random.csv">CSV版</a></li>
+<li><a href="/r-how-to/post/data/car-random.xlsx">Excel ファイル</a></li>
+<li><a href="/r-how-to/post/data/car-random.csv">CSV版</a></li>
 </ul>
 <div id="readxl-" class="section level2">
 <h2>readxl パッケージを使う</h2>
-<pre class="r"><code>library(readxl)</code></pre>
-<pre><code>## Warning: package &#39;readxl&#39; was built under R version 3.5.2</code></pre>
-<pre class="r"><code>d &lt;- read_excel(path = &quot;data/car-random.xlsx&quot;, sheet = 1)
+<pre class="r"><code>library(readxl)
+d &lt;- read_excel(path = &quot;data/car-random.xlsx&quot;, sheet = 1)
 d</code></pre>
 <pre><code>## # A tibble: 10 x 3
 ##    番号  車                 速度 

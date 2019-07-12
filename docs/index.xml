@@ -26,7 +26,7 @@
       <pubDate>Fri, 12 Jul 2019 22:00:00 +0900</pubDate>
       
       <guid>/r-how-to/2019/07/12/excel%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80/</guid>
-      <description>wakefield パッケージで作った適当なデータを読み込んでみる． Excel ファイル CSV版 readxl パッケージを使う library(readxl) ## Warning: package &amp;#39;readxl&amp;#39; was built under R version 3.5.2 d &amp;lt;- read_excel(path = &amp;quot;data/car-random.xlsx&amp;quot;, sheet = 1) d ## # A tibble: 10 x 3</description>
+      <description>wakefield パッケージで 作った 適当なデータを読み込んでみる． Excel ファイル CSV版 readxl パッケージを使う library(readxl) d &amp;lt;- read_excel(path = &amp;quot;data/car-random.xlsx&amp;quot;, sheet = 1) d ## # A tibble: 10 x 3 ## 番号 車 速度 ## &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;</description>
     </item>
     
     <item>
