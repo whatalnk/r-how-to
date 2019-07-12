@@ -6,3 +6,5 @@ title: About
 ## About
 
 R の使い方とかについて，いろいろ書く場所．
+
+ロゴは [random logo maker](https://hikalium.github.io/randlogo/index.html) です．
