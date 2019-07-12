@@ -17,7 +17,34 @@
       <pubDate>Fri, 12 Jul 2019 22:00:00 +0900</pubDate>
       
       <guid>/about/</guid>
-      <description>R の使い方とかについて，いろいろ書く．</description>
+      <description>About R の使い方とかについて，いろいろ書く場所．</description>
+    </item>
+    
+    <item>
+      <title>Excelからデータを読み込む</title>
+      <link>/2019/07/12/excel%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80/</link>
+      <pubDate>Fri, 12 Jul 2019 22:00:00 +0900</pubDate>
+      
+      <guid>/2019/07/12/excel%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80/</guid>
+      <description>wakefield パッケージで作った適当なデータを読み込んでみる． Excel ファイル CSV版 readxl パッケージを使う library(readxl) ## Warning: package &amp;#39;readxl&amp;#39; was built under R version 3.5.2 d &amp;lt;- read_excel(path = &amp;quot;data/car-random.xlsx&amp;quot;, sheet = 1) d ## # A tibble: 10 x 3</description>
+    </item>
+    
+    <item>
+      <title>wakefieldパッケージでデータを生成する</title>
+      <link>/2019/07/12/wakefield%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%A7%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E7%94%9F%E6%88%90%E3%81%99%E3%82%8B/</link>
+      <pubDate>Fri, 12 Jul 2019 21:00:00 +0900</pubDate>
+      
+      <guid>/2019/07/12/wakefield%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%A7%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E7%94%9F%E6%88%90%E3%81%99%E3%82%8B/</guid>
+      <description>trinker/wakefield カテゴリごとにそれっぽいデータを生成してくれるパッケージ d &amp;lt;- data.frame( &amp;quot;番号&amp;quot; = wakefield::id(10), &amp;quot;車&amp;quot; = wakefield::car(10), &amp;quot;速</description>
+    </item>
+    
+    <item>
+      <title>blogdown でウェブサイトを作る</title>
+      <link>/2019/07/12/blogdown-%E3%81%A7%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/2019/07/12/blogdown-%E3%81%A7%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B/</guid>
+      <description>blogdown パッケージをインストール Rstudio からプロジェクトを新規作成 New directory &amp;gt; Website using blogdown 設定を変える(config.toml) languageCode = &#34;ja-JP&#34; title publishDir = &#34;doc&#34; 各種アカウント情報 [params] の</description>
     </item>
     
   </channel>
