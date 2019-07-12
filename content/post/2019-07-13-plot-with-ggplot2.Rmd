@@ -1,0 +1,50 @@
+---
+title: ggplot2でグラフを作る
+author: ''
+date: '2019-07-13'
+slug: plot-with-ggplot2
+categories: []
+tags: []
+---
+
+`ggplot2` パッケージ読み込み
+
+```{r}
+library(ggplot2)
+```
+
+データは組み込みの `iris`
+
+```{r}
+d <- iris
+head(d)
+```
+
+基本
+
+* `data`: 使うデータ．`data.frame`． 
+* `mapping`: プロットするデータが入っている列の指定など．
+* `geom_xx`: プロットの形式．点の場合は `geom_point`
+
+```{r}
+ggplot(data = d, 
+       mapping=aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point()
+```
+
+慣れるといろいろできる
+
+```{r}
+windowsFonts(Meiryo = windowsFont("メイリオ"), 
+             ComicSansMS = windowsFont("Comic Sans MS"))
+ggplot(data = d, 
+       mapping=aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(size=3) + 
+  xlab("長さ") + ylab("幅") + 
+  theme_bw() + 
+  theme(
+    panel.grid = element_blank(), 
+    axis.text = element_text(family = "ComicSansMS", size=16), 
+    axis.title = element_text(family = "Meiryo", size=16)
+  )
+```
