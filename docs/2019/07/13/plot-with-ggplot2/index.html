@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>ggplot2でグラフを作る - R how to</title>
+<meta property="og:title" content="ggplot2でグラフを作る - R how to">
+
+
+  <link href='/r-how-to/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/r-how-to/css/fonts.css" media="all">
+<link rel="stylesheet" href="/r-how-to/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/r-how-to/" class="nav-logo">
+    <img src="/r-how-to/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/r-how-to/about/">About</a></li>
+    
+    <li><a href="https://github.com/whatalnk">GitHub</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">ggplot2でグラフを作る</h1>
+
+    
+    <span class="article-date">2019-07-13</span>
+    
+
+    <div class="article-content">
+      
+
+
+<p><code>ggplot2</code> パッケージ読み込み</p>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.2</code></pre>
+<p>データは組み込みの <code>iris</code></p>
+<pre class="r"><code>d &lt;- iris
+head(d)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p>基本</p>
+<ul>
+<li><code>data</code>: 使うデータ．<code>data.frame</code>．</li>
+<li><code>mapping</code>: プロットするデータが入っている列の指定など．</li>
+<li><code>geom_xx</code>: プロットの形式．点の場合は <code>geom_point</code></li>
+</ul>
+<pre class="r"><code>ggplot(data = d, 
+       mapping=aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point()</code></pre>
+<p><img src="/r-how-to/post/2019-07-13-plot-with-ggplot2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>慣れるといろいろできる</p>
+<pre class="r"><code>windowsFonts(Meiryo = windowsFont(&quot;メイリオ&quot;), 
+             ComicSansMS = windowsFont(&quot;Comic Sans MS&quot;))
+ggplot(data = d, 
+       mapping=aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(size=3) + 
+  xlab(&quot;長さ&quot;) + ylab(&quot;幅&quot;) + 
+  theme_bw() + 
+  theme(
+    panel.grid = element_blank(), 
+    axis.text = element_text(family = &quot;ComicSansMS&quot;, size=16), 
+    axis.title = element_text(family = &quot;Meiryo&quot;, size=16)
+  )</code></pre>
+<p><img src="/r-how-to/post/2019-07-13-plot-with-ggplot2_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/r-how-to/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/r-how-to/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+

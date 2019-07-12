@@ -6,10 +6,19 @@
     <description>Recent content in Posts on R how to</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Fri, 12 Jul 2019 22:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/r-how-to/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ggplot2でグラフを作る</title>
+      <link>/r-how-to/2019/07/13/plot-with-ggplot2/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/r-how-to/2019/07/13/plot-with-ggplot2/</guid>
+      <description>ggplot2 パッケージ読み込み library(ggplot2) ## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 3.5.2 データは組み込みの iris d &amp;lt;- iris head(d) ## Sepal.Length Sepal.Width Petal.Length Petal.Width Species ## 1 5.1 3.5 1.4 0.2 setosa ## 2 4.9 3.0 1.4 0.2 setosa ## 3 4.7 3.2 1.3 0.2 setosa ## 4 4.6 3.1 1.5 0.2 setosa ##</description>
+    </item>
     
     <item>
       <title>Excelからデータを読み込む</title>

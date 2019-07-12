@@ -3,6 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/r-how-to/post/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/r-how-to/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/r-how-to/2019/07/13/plot-with-ggplot2/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/r-how-to/about/</loc>
     <lastmod>2019-07-12T22:00:00+09:00</lastmod>
   </url>
@@ -10,18 +27,6 @@
   <url>
     <loc>/r-how-to/2019/07/12/excel%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80/</loc>
     <lastmod>2019-07-12T22:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/r-how-to/post/</loc>
-    <lastmod>2019-07-12T22:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/r-how-to/</loc>
-    <lastmod>2019-07-12T22:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
