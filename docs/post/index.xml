@@ -35,7 +35,7 @@
       <pubDate>Fri, 12 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/r-how-to/2019/07/12/blogdown-%E3%81%A7%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B/</guid>
-      <description>blogdown パッケージをインストール Rstudio からプロジェクトを新規作成 New directory &amp;gt; Website using blogdown 設定を変える(config.toml) languageCode = &#34;ja-JP&#34; title publishDir = &#34;docs&#34; 各種アカウント情報 [params] の</description>
+      <description>blogdown パッケージをインストール Rstudio からプロジェクトを新規作成 New directory &amp;gt; Website using blogdown 設定を変える(config.toml) baseurl = &#34;https://uesrname.github.io/repo-name/&#34; languageCode = &#34;ja-JP&#34; title publishDir = &#34;docs&#34; 各種アカウント情</description>
     </item>
     
   </channel>
