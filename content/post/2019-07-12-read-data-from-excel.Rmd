@@ -7,14 +7,16 @@ categories: []
 tags: []
 ---
 
-`wakefield` パッケージで作った適当なデータを読み込んでみる．
+`wakefield` パッケージで [作った](/r-how-to/2019/07/12/wakefieldパッケージでデータを生成する/) 適当なデータを読み込んでみる．
 
-* [Excel ファイル](/post/data/car-random.xlsx)
-* [CSV版](/post/data/car-random.csv)
+
+
+* [Excel ファイル](/r-how-to/post/data/car-random.xlsx)
+* [CSV版](/r-how-to/post/data/car-random.csv)
 
 ## readxl パッケージを使う
 
-```{r}
+```{r warning=FALSE}
 library(readxl)
 d <- read_excel(path = "data/car-random.xlsx", sheet = 1)
 d
