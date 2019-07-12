@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://whatalnk.github.io/r-how-to/"
 languageCode = "ja-JP"
 title = "R how to"
 theme = "hugo-lithium"
